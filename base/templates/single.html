@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Ait Mlouk Ismail</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="/">IsmaiL</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="index.html#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="index.html#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="index.html#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="index.html#services-section" class="nav-link"><span>Services</span></a></li>
+	          <li class="nav-item"><a href="index.html#skills-section" class="nav-link"><span>Skills</span></a></li>
+	          <li class="nav-item"><a href="index.html#projects-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="index.html#blog-section" class="nav-link"><span>My Blog</span></a></li>
+	          <li class="nav-item"><a href="index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section class="hero-wrap js-fullheight" style="background-image:url('static/images/image_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+          <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
+            <h1 class="mb-3 bread">Blog Single Post</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="blog.html">projects <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog Single <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      {{ projects.body | safe }}
+
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row">
+
+            <div class="pt-5 mt-5">
+              
+              <h3 class="mb-5">{{comment}} Comments</h3>
+              
+              <ul class="comment-list">
+                {% for comment in comments %}
+                {% if comment.number == "1.png" %}
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="{% static 'avatar/1.png' %}" alt="Image ">
+                  </div>
+                  <div class="comment-body">
+                    <h3>{{ comment.name }}</h3>
+                    <div class="meta">{{ comment.created }}</div>
+                    <p>{{ comment.body}}</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+                {% elif comment.number == "2.png" %}
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="{% static 'avatar/2.png' %}" alt="Image ">
+                  </div>
+                  <div class="comment-body">
+                    <h3>{{ comment.name }}</h3>
+                    <div class="meta">{{ comment.created }}</div>
+                    <p>{{ comment.body}}</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+                {% elif comment.number == "3.png" %}
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="{% static 'avatar/3.png' %}" alt="Image ">
+                  </div>
+                  <div class="comment-body">
+                    <h3>{{ comment.name }}</h3>
+                    <div class="meta">{{ comment.created }}</div>
+                    <p>{{ comment.body}}</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+                {% elif comment.number == "4.png" %}
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="{% static 'avatar/4.png' %}" alt="Image ">
+                  </div>
+                  <div class="comment-body">
+                    <h3>{{ comment.name }}</h3>
+                    <div class="meta">{{ comment.created }}</div>
+                    <p>{{ comment.body}}</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+                {% elif comment.number == "5.png" %}
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="{% static 'avatar/5.png' %}" alt="Image ">
+                  </div>
+                  <div class="comment-body">
+                    <h3>{{ comment.name }}</h3>
+                    <div class="meta">{{ comment.created }}</div>
+                    <p>{{ comment.body}}</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+                {% elif comment.number == "6.png" %}
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="{% static 'avatar/6.png' %}" alt="Image ">
+                  </div>
+                  <div class="comment-body">
+                    <h3>{{ comment.name }}</h3>
+                    <div class="meta">{{ comment.created }}</div>
+                    <p>{{ comment.body}}</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+                {% elif comment.number == "7.png" %}
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="{% static 'avatar/7.png' %}" alt="Image ">
+                  </div>
+                  <div class="comment-body">
+                    <h3>{{ comment.name }}</h3>
+                    <div class="meta">{{ comment.created }}</div>
+                    <p>{{ comment.body}}</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+                {% elif comment.number == "8.png" %}
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="{% static 'avatar/8.png' %}" alt="Image ">
+                  </div>
+                  <div class="comment-body">
+                    <h3>{{ comment.name }}</h3>
+                    <div class="meta">{{ comment.created }}</div>
+                    <p>{{ comment.body}}</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+                {% elif comment.number == "9.png" %}
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="{% static 'avatar/9.png' %}" alt="Image ">
+                  </div>
+                  <div class="comment-body">
+                    <h3>{{ comment.name }}</h3>
+                    <div class="meta">{{ comment.created }}</div>
+                    <p>{{ comment.body}}</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+                {% elif comment.number == "10.png" %}
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="{% static 'avatar/10.png' %}" alt="Image ">
+                  </div>
+                  <div class="comment-body">
+                    <h3>{{ comment.name }}</h3>
+                    <div class="meta">{{ comment.created }}</div>
+                    <p>{{ comment.body}}</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+                {% endif %}
+                {% endfor %}
+              </ul>
+              <!-- END comment-list -->
+              
+              <div class="comment-form-wrap pt-5">
+                <h3 class="mb-5">Leave a comment</h3>
+                <form id='form' action="" class="p-5 bg-dark" method="POST">
+                  <div style="color:red;" id="error"></div>
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" class="form-control" id="username" name="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="body" id="message" cols="30" rows="10" class="form-control"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> <!-- .section -->
+		
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About</h2>
+              <p>A Full Stack Developer, I delivered several services that gave the complete satisfaction to my employers.I’m always ready to take on new challenges...</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://www.linkedin.com/in/ismail-ait-mlouk-a1ba16201/"><span class="icon-linkedin"></span></a></li>
+                <li class="ftco-animate"><a href="https://web.facebook.com/aitmlouk.ismail.31"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://instagram.com/ait_mlouk_ismail?igshid=YmMyMTA2M2Y="><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Services</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Business Strategy</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Data Analysis</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Graphic Design</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Ouarzazate, Morocco</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+212 681217450</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">mlouk24.ger@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Design by &copy;<script>document.write(new Date().getFullYear());</script> Ait Mlouk IsmaiL |<i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Me</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  
+  <script src="{% static 'js/main.js' %}"></script>
+  <script>
+  const username = document.getElementById('username')
+  const email = document.getElementById('email')
+  const message = document.getElementById('message')
+  const form = document.getElementById('form')
+  const errorElement = document.getElementById('error')
+
+
+  form.addEventListener('submit', (e) => {
+    let messages = []
+
+    if (username.value === '') {
+      messages.push('Name is required')
+    }
+    if (email.value === '') {
+      messages.push('email is required')
+    }
+
+    if (message.value.length <= 8) {
+      messages.push('message must be more than 8 characters')
+    }
+
+  
+
+    if (messages.length > 0) {
+      e.preventDefault()
+      errorElement.innerText = messages.join(', ')
+    }
+  });
+
+
+  </script>
+    
+  </body>
+</html>
